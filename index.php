@@ -1,22 +1,24 @@
 <?php
-session_start();
+    require_once('user.php');
+    $user = new User();
 
-// Redirect to login if user is not authenticated
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
+    session_start();
+
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome Navish_Sharma</title>
+    <title>Welcome User</title>
 </head>
-  
+
 
 <body>
-    <h1>Assignment 1</h1>
+    <h1>Assignment 2</h1>
     <p>Welcome, <?= htmlspecialchars($_SESSION['username']) ?></p>
     <p>Today is <?= date("l, F j, Y") ?></p>
 
