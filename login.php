@@ -22,10 +22,15 @@ if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 1) {
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br>
 
+
         <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password<br><br>
 
         <input type="submit" value="Submit">
     </form>
+
+    <br>
+
+    <a href="signup.php">New Here? SignUp Now!</a>
 
     <script>
         function togglePassword() {
